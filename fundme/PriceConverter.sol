@@ -14,6 +14,7 @@ library PriceConverter {
             0x694AA1769357215DE4FAC081bf1f309aDC325306
         );
         (, int256 answer, , , ) = priceFeed.latestRoundData();
+        // this abi has 4 value output but we need only price , 2nd place is for price so , price feed , ,,,
         // ETH/USD rate in 18 digit
         return uint256(answer * 10000000000);
     }
